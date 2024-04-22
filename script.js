@@ -1,5 +1,24 @@
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  document.getElementById('result').innerText = "";
+  const loginname = document.getElementById('loginname').value;
+  const password = document.getElementById('password').value;
+  if(loginname === "masnsa" && password === "masnsa_pass") {
+    document.getElementById('result').innerText = "Login Successful";
+    setTimeout(() => {
+      debugger;
+      document.getElementById('result').innerText = "";
+      document.getElementById('loginForm').classList.add('collapse');
+      document.getElementById('mbtiForm').classList.remove('collapse');
+    }, 1000);
+  } else {
+    document.getElementById('result').innerText = "Failed to login";
+  }
+})
+
 document.getElementById('mbtiForm').addEventListener('submit', async function(event) {
   event.preventDefault(); // Prevent default form submission
+  document.getElementById('result').innerText = "";
 
   const username = document.getElementById('username').value;
   try {
