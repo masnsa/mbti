@@ -10,7 +10,7 @@ document.getElementById('mbtiForm').addEventListener('submit', async function(ev
     const userMBTI = mbtiData.find(data => data.username === username);
 
     if (userMBTI) {
-      document.getElementById('result').innerText = `Hello ${username}, your MBTI is: ${userMBTI.mbti}`;
+      document.getElementById('result').innerText = `Hello ${username}, your MBTI is: ${userMBTI.mbti.toUpperCase()}`;
     } else {
       document.getElementById('result').innerText = `Sorry, no MBTI found for ${username}`;
     }
