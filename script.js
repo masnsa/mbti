@@ -2,7 +2,6 @@ document.getElementById('mbtiForm').addEventListener('submit', async function(ev
   event.preventDefault(); // Prevent default form submission
 
   const username = document.getElementById('username').value;
-  debugger;
   try {
     const response = await fetch('./input.csv');
     const data = await response.text();
