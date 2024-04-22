@@ -2,9 +2,9 @@ document.getElementById('mbtiForm').addEventListener('submit', async function(ev
   event.preventDefault(); // Prevent default form submission
 
   const username = document.getElementById('username').value;
-
+  debugger;
   try {
-    const response = await fetch('URL_TO_YOUR_CSV_FILE');
+    const response = await fetch('./input.csv');
     const data = await response.text();
     const mbtiData = parseCSV(data);
     const userMBTI = mbtiData.find(data => data.username === username);
